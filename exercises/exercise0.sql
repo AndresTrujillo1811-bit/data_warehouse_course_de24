@@ -25,12 +25,8 @@ SELECT COUNT(*) AS number_rows FROM google_keywords;
 
 -- d) When is the first search and when is the latest search in the dataset?
 SELECT * FROM google_keywords LIMIT 20;
-
--- First search
-SELECT * FROM google_keywords ORDER BY date ASC LIMIT 1;
-
--- Last search
-SELECT * FROM google_keywords ORDER BY date DESC LIMIT 1;
+SELECT * FROM google_keywords ORDER BY date ASC LIMIT 1; -- first search
+SELECT * FROM google_keywords ORDER BY date DESC LIMIT 1; -- last search
 
 
 -- e) Which are the 10 most popular keywords?
