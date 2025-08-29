@@ -9,3 +9,5 @@ CREATE DATABASE IF NOT EXISTS movies;
 -- set up staging schema
 CREATE SCHEMA staging;
 -- alternative: CREATE SCHEMA movies.changing;
+
+USE DATABASE movies;

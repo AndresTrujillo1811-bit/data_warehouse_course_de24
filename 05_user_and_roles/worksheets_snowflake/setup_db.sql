@@ -46,3 +46,4 @@ CREATE TABLE transactions (
 
 SHOW TABLES;
 
+DROP WAREHOUSE andres_wh;
