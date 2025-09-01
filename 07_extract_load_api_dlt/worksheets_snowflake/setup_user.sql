@@ -1,0 +1,5 @@
+USE ROLE useradmin;
+
+CREATE USER IF NOT EXISTS extract_loader
+    PASSWORD = 'meja1234'
+    DEFAULT_WAREHOUSE = 'COMPUTE_WH';
