@@ -207,4 +207,4 @@ marimo/_lsp/
 __marimo__/
 
 .dlt
-setup_user
+10_setup_dbt/worksheets_snowflake/setup_user.sql
