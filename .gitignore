@@ -208,3 +208,4 @@ __marimo__/
 
 .dlt
 10_setup_dbt/worksheets_snowflake/setup_user.sql
+13_dashboard_streamlit/worksheets_snowflake/setup_user_reporter.sql
