@@ -1,4 +1,7 @@
 {
     "taipyStudio.gUI.elementsFilePaths": [],
-    "dbt.perspectiveTheme": "Vintage"
+    "dbt.perspectiveTheme": "Vintage",
+    "python.analysis.extraPaths": [
+        "./15_orchestration_dagster_duckdb/data_extract_load"
+    ]
 }
