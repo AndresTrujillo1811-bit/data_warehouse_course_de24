@@ -9,6 +9,10 @@ import sys
 sys.path.insert(0, '../data_extract_load')
 from load_job_ads import jobads_resourse
 
+
 # data warehouse directory
 db_path = str(Path(__file__).parents[1] / "data_warehouse/job_ads.duckdb")
+
+#dlt assets
+dlt_resource = DagsterDltResource()
 
