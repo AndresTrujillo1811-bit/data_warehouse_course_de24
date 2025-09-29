@@ -14,11 +14,6 @@ def _get_ads(url_for_search, params):
 
 @dlt.resource(write_disposition="append")
 def jobsearch_resource(params):
-    """
-    params should include at least:
-      - "q": your query
-      - "limit": page size (e.g. 100)
-    """
     url = "https://jobsearch.api.jobtechdev.se"
     url_for_search = f"{url}/search"
     limit = params.get("limit", 100)
@@ -28,20 +23,13 @@ def jobsearch_resource(params):
         # build this page’s params
         page_params = dict(params, offset=offset)
         data = _get_ads(url_for_search, page_params)
-
         hits = data.get("hits", [])
         if not hits:
-            # no more results
             break
-
-        # yield each ad on this page
         for ad in hits:
             yield ad
-
-        # if fewer than a full page was returned, we’re done
         if len(hits) < limit or offset > 1900:
             break
-
         offset += limit
 
 
@@ -64,11 +52,9 @@ def run_pipeline(query, table_name, occupation_fields):
 if __name__ == "__main__":
     working_directory = Path(__file__).parent
     os.chdir(working_directory)
-
-    query = "bygg och anläggning, Kultur, media, design, Pedagogik"
+    query = ""
     table_name = "job_ads"
 
     # Bygg och anläggning, "Kultur, media, design", "Pedagogik"
     occupation_fields = ("j7Cq_ZJe_GkT", "9puE_nYg_crq", "MVqp_eS8_kDZ")
-
     run_pipeline(query, table_name, occupation_fields)
