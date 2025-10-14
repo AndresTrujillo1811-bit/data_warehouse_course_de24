@@ -7,7 +7,7 @@ from pathlib import Path
 # to import dlt script
 import sys 
 sys.path.insert(0, '../data_extract_load')
-from load_job_ads import jobads_resourse
+from data_extract_load import jobads_resourse
 
 
 # data warehouse directory
